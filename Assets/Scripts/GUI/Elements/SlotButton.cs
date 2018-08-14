@@ -28,10 +28,10 @@ public class SlotButton : MonoBehaviour
         usesText.text = uses.ToString();
     }
 
-    public void Initialize(string _image, SpaceShip _playerSpaceship)
+    public void Initialize(string _image, float _cooldown, SpaceShip _playerSpaceship)
     {        
         slotImage.sprite = ResourcesManager.Load<Sprite>(ConstantsResourcesPath.SPRITES, _image);
-
+        cooldown = _cooldown;
 
         playerSpaceship = _playerSpaceship;
     }

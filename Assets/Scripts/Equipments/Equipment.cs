@@ -17,6 +17,10 @@ public class Equipment : MonoBehaviour
     [SerializeField]
     private int uses;
 
+    public float Coolldown { get { return cooldown; } }
+    [SerializeField]
+    private float cooldown;
+
     public EnumEquipmentType type;
 
     private EquipmentConfig config;
@@ -39,6 +43,7 @@ public class Equipment : MonoBehaviour
         id = config.id;
         maxUses = config.uses[config.level - 1];
         uses = maxUses;
+        cooldown = config.cooldown[config.level - 1];
     }
 
     public void Use()
