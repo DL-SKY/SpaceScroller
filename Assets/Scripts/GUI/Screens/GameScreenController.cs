@@ -146,7 +146,7 @@ public class GameScreenController : ScreenController
                     var newSlot = newButton.GetComponent<SlotButton>();
 
                     newSlot.id = equipment.ID;
-                    newSlot.Initialize(equipment.GetSlotImage(), playerSpaceship);
+                    newSlot.Initialize(equipment.GetSlotImage(), equipment.Coolldown, playerSpaceship);
                     newSlot.UpdateProperties(equipment.Uses);
 
                     slotButtons.Add(newSlot);
